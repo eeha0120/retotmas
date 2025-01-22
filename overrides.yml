@@ -1,0 +1,11 @@
+vulnerabilities:
+    # Override vulnerability findings whose CVE-ID is CVE-0000-0000
+- rule:
+vulnerability: CVE-0000-0000
+reason: Not executed
+# Override vulnerability findings detected on libcurl version 1.5.1
+- rule:
+package:
+name: libcurl
+version: 1.5.1
+reason: Dev dependency
