@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: aplicativo
+  labels:
+    app: aplicativo
+spec:
+  hostNetwork: true
+  hostIPC: true
+  hostPID: true
+  containers:
+  - name: ubuntu-container
+    image: nginx
+    command: ["sleep", "infinity"]
+    securityContext:
+      privileged: false
+      runAsUser: 0
+      allowPrivilegeEscalation: true
+      readOnlyRootFilesystem: false
+  restartPolicy: Never
