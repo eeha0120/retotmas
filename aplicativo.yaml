@@ -5,16 +5,16 @@ metadata:
   labels:
     app: aplicativo
 spec:
-  hostNetwork: true
-  hostIPC: true
-  hostPID: true
+  hostNetwork: false
+  hostIPC: false
+  hostPID: false
   containers:
   - name: ubuntu-container
     image: nginx
     command: ["sleep", "infinity"]
     securityContext:
       privileged: false
-      runAsUser: 0
-      allowPrivilegeEscalation: true
-      readOnlyRootFilesystem: false
+      runAsNonRoot: false
+      allowPrivilegeEscalation: false
+      readOnlyRootFilesystem: true
   restartPolicy: Never
