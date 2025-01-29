@@ -1,18 +1,25 @@
 vulnerabilities:
   - rule:
-      vulnerability: CVE-2023-6879
+      vulnerability: CVE-2022-31813
     reason: para Reto TMAS
   - rule:
       package:
-        name: libaom3
-        version: 3.6.0
+        name: apache2
+        version: 2.4.25-3
     reason: Para Reto TMAS
   - rule:
-      vulnerability: CVE-2023-45853
+      vulnerability: CVE-2022-28615
     reason: para Reto TMAS
   - rule:
       package:
-        name: zlib1g
-        version: 1:1.2.13
+        name: apache2
+        version: 2.4.25-3
     reason: Para Reto TMAS
-    
+  - rule:
+      vulnerability: CVE-2022-23943
+    reason: para Reto TMAS
+  - rule:
+      package:
+        name: apache2
+        version: 2.4.25-3
+    reason: Para Reto TMAS    
