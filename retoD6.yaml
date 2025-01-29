@@ -16,7 +16,7 @@ jobs:
 
       - name: Download Docker image
         run: |
-          docker pull nginx
+          docker pull web-dvwa
           docker images
 
       - name: Download Artifact Scanner
