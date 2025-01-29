@@ -28,7 +28,9 @@ jobs:
         env:
           TMAS_API_KEY: ${{ secrets.TMAS_API_KEY }}
         run: |
-          ./tmas scan docker:vulnerables/web-dvwa:latest -VMS --saveSBOM > results.json  --override overrides.yml
+          # ./tmas scan docker:vulnerables/web-dvwa:latest -VMS --saveSBOM > results.json  --override overrides.yml
+          ./tmas scan registry:eeha0120/vulnerables/web-dvwa@sha256:dae203fe11646a86937bf04db0079adef295f426da68a92b40e3b181f337daa7 -VMS --saveSBOM > results.json  --override overrides.yml
+  
   
       - name: Upload Json as Artifact
         uses: actions/upload-artifact@v3
