@@ -16,7 +16,7 @@ jobs:
 
       - name: Download Docker image
         run: |
-          docker pull web-dvwa
+          docker pull dvwa-deployment
           docker images
 
       - name: Download Artifact Scanner
@@ -28,7 +28,7 @@ jobs:
         env:
           TMAS_API_KEY: ${{ secrets.TMAS_API_KEY }}
         run: |
-          ./tmas scan docker:web-dvwa:latest -VMS --saveSBOM > results.json  --override overrides.yml
+          ./tmas scan docker:dvwa-deployment:latest -VMS --saveSBOM > results.json  --override overrides.yml
   
       - name: Upload Json as Artifact
         uses: actions/upload-artifact@v3
